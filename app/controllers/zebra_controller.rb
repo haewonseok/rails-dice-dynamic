@@ -29,7 +29,7 @@ class ZebraController < ApplicationController
     render({ :template => "game_templates/dice_5_4" })
   end
 
-  def cate
+  def cat
     @num_dice = params.fetch("number_of_dice").to_i
     @sides = params.fetch("how_many_sides").to_i
   
@@ -37,6 +37,7 @@ class ZebraController < ApplicationController
     @num_dice.times do
       die = rand(1..@sides)
       @rolls.push(die)
+    end
     render({ :template => "game_templates/dice_flexible" })
   end
 end

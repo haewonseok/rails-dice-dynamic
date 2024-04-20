@@ -5,6 +5,4 @@ Rails.application.routes.draw do
   get("/dice/1/20", { :controller => "zebra", :action => "lion" })
   get("/dice/5/4", { :controller => "zebra", :action => "rabbit" })
   get("/dice/:number_of_dice/:how_many_sides", { :controller => "zebra", :action => "cat" })
-  params.fetch("number_of_dice").to_i
-  params.fetch("how_many_sides").to_i
 end
